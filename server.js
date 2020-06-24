@@ -36,5 +36,7 @@ app.listen(port, function () {
   console.log('Node.js listening ...');
 });
 
+//mongoose connection
+mongoose.connect('mongodb+srv://admin:admin@cluster0-v6fzq.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //mongodb+srv://admin:<password>@cluster0-v6fzq.mongodb.net/<dbname>?retryWrites=true&w=majority
