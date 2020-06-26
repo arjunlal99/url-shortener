@@ -12,7 +12,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 /** this project needs a db !! **/ 
-// mongoose.connect(process.env.DB_URI);
+mongoose.connect(process.env.DB_URI);
 
 app.use(cors());
 
@@ -37,6 +37,6 @@ app.listen(port, function () {
 });
 
 //mongoose connection
-mongoose.connect('mongodb+srv://admin:admin@cluster0-v6fzq.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+//mongoose.connect('mongodb+srv://admin:admin@cluster0-v6fzq.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
 //mongodb+srv://admin:<password>@cluster0-v6fzq.mongodb.net/<dbname>?retryWrites=true&w=majority
