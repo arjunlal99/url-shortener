@@ -29,7 +29,7 @@ app.use('/public', express.static(process.cwd() + '/public'));
 //retrieve info from form
 app.post('api/shorturl/new', function(req,res){
   response = {URL:req.body.url};
-  res.end(JSON.stringify(response));
+  res.send(JSON.stringify(response));
 });
 
 app.get('/', function(req, res){
