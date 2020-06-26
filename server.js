@@ -28,8 +28,7 @@ app.get('/', function(req, res){
   
 // your first API endpoint... 
 app.get("/api/hello", function (req, res) {
-  res.json({greeting: 'hello API'});
-  res.send(process.env.DB_URI)
+  res.json({greeting: 'hello API',URI:process.env.URI});
 });
 
 
