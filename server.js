@@ -12,7 +12,12 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 /** this project needs a db !! **/ 
-mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {console.log("connected")}).catch(err => console.log(err));
+mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then((client) => {
+      console.log("connected");
+      const db = client.db('test')})
+  
+  .catch(err => console.log(err));
 
 app.use(cors());
 
