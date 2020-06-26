@@ -27,7 +27,7 @@ app.use(cors());
 app.use('/public', express.static(process.cwd() + '/public'));
 
 //retrieve info from form
-app.post('api/shorturl/new', function(req,res){
+app.post('/api/shorturl/new', function(req,res){
   response = {URL:req.body.url};
   res.send(JSON.stringify(response));
 });
