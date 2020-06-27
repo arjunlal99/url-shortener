@@ -3,6 +3,7 @@
 var express = require('express');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
+var dns = require('dns');
 
 var cors = require('cors');
 
@@ -23,6 +24,11 @@ app.use(cors());
 
 /** this project needs to parse POST bodies **/
 // you should mount the body-parser here
+app.get('/api/test',function(req,res){
+  dns.lookup('https://www.freecodecamp.org',(err,address,family)=>{
+  console.log(err)})
+})
+
 
 app.use('/public', express.static(process.cwd() + '/public'));
 
